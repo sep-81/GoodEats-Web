@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>?shelf_name?</title>
+    <style>
+        body {
+           background-color:burlywood;
+       } 
+       div {
+           width: 60%;
+           color: blue;
+           margin: auto;
+       }    
+       
+   </style>
+</head>
+<body>
+    <h3>shelf:?shelf_name? id:?shelf_id?</h3>
+    <div>
+        <ul>
+            <li> </li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <form action="/edit_shelf" method="POST">
+    <label for="recipe_id">recipe_id : </label>
+    <br>
+    <input type="number" name="recipe_id" id="recipe_id" required>
+    <input type="hidden" name="shelf_id" value="????">
+    <input type="submit" value="delete" formaction="/edit_shelf?type=delete">
+    <input type="submit" value="add" formaction="/edit_shelf?type=add">
+    </form>
+
+</body>
+</html>

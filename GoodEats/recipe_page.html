@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipe_name</title>
+    <style>
+        div {
+            float: left;
+            width: 50%;
+        }
+        div a {
+            color: blue;
+            text-decoration: underline;
+        }
+        body {
+            background-color: burlywood;
+        }
+        img {
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+             width: 50%;
+        }
+        </style>
+</head>
+<body>
+    <h3>food_name</h3>
+    <img src="paris.jpg" alt="Paris" >
+    <div>
+        <ul>
+            <li>
+                
+            </li>
+            <li>
+                <ul>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <p><b>choose rate if you have not rated before<br> and choose edit_rate if have rated before</b></p>
+        <form action="/rate_handler" method="POST">
+            <label for="rating">rating:</label>
+            <br>
+        <input type="number" step="0.01" id="rating" name="rate" min="1.0" max="5.0" required>
+        <input type="hidden" name="recipe_id" value="?recipe_id?">
+        <input type="submit" value="rate" formaction="/rate_handler?type=rate">
+        <input type="submit" value="edit_rate" formaction="/rate_handler?type=edit_rate">
+
+    </div>
+
+</body>
+</html>

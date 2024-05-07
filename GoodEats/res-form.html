@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head> <title>form</title></head>
+<body>
+    
+
+<form onsubmit="return ajaxpost()">
+    Name: <input type="text" id="user-name" name="user_name"  required/>
+    <br><br>
+    Email: <input type="email" id="user-email" name="email" required/>
+    <br><br>
+    <input type="submit" value="Go!"/>
+  </form>
+  <script>
+  function ajaxpost () {
+    // (A) GET FORM DATA
+    var data = new FormData();
+    data.append("name", document.getElementById("user-name").value);
+    data.append("email", document.getElementById("user-email").value);
+   
+    // (B) AJAX REQUEST
+    // NOTE - AJAX WILL NOT WORK WITH file://
+    var xhr = new XMLHttpRequest();
+    xhr.send(data);
+    xhr.open('POST', "/form-handler");
+    xhr.onload = function () {
+      console.log(this.response);
+      console.log(this.status);
+   
+      // (B1) SERVER NOT RESPONDING OR SOMETHING
+      // HTTP response 200 is OK
+      // See https://developer.mozilla.org/en-US/docs/Web/HTTP/Status for more
+      if (xhr.status != 200) {
+        alert("SERVER ERROR");
+      }
+   
+      // (B2) WHEN SERVER IS DONE
+      else {
+        if (xhr.response == "OK") {
+          alert("SUCCESSFUL!");
+        } else {
+          alert("FAILURE!");
+        }
+      }
+    };
+    
+   
+    // (C) PREVENT FORM SUBMIT
+    return false;
+  }
+</script>
+</body>
+</html>

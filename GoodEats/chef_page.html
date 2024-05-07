@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef</title>
+    <style>
+        body {
+           background-color:burlywood;
+       } 
+       div {
+           width: 60%;
+           color: blue;
+           margin: auto;
+       }    
+       h2 {
+        text-align: center;
+       }
+       #d1 {
+         background-color: aquamarine;  
+       }
+   </style>
+</head>
+<body>
+    <h2>wellcom to good_eat <br> chef:?????</h2>
+    <div>
+        <ul>
+            <li>
+                <ul>
+                    <li>
+
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+    </div>
+<div >
+    <form action="/chef?type=add" method="POST">
+        <p>add recipe :</p>
+    <label for="title">recipe title :</label>
+    <input type="text" name="title" id="title" required>
+    <br>
+    <p>note <b>delimiter is ','</b></p>
+    <label for="‫‪ingredients‬‬">‫‪ingredients‬‬ : </label>
+   <textarea name="ingredients" id="ingredients" cols="30" rows="10" required></textarea>
+   <br>
+   <label for="‫‪vegetarian‬‬">‫‪vegetarian‬‬ : </label>
+   <select name="vegetarian" id="vegetarian" required>
+       <option value="Yes">Yes</option>
+       <option value="No">No</option>
+   </select>
+   <br>
+   <label for="min_to_ready">‫‪minutes_to_ready : ‬‬</label>
+   <input type="number" min="0" id="min_to_ready" name="min_to_ready" required>
+   <br>
+   <p>note <b>delimiter is ','</b></p>
+   <label for="tags">tags : </label>
+   <input type="text" size="50" id="tags" name="tags"required>
+   <br>
+   <label for="image">image address : </label>
+   <input type="url" name="img" id="image" required>
+   <br>
+   <input type="submit">
+   </form>
+ </div>
+    <div id="d1">
+        <form action="/chef?type=delete" method="POST">
+        <p style="color: crimson;">please enter recipe id for deleting</p>
+        <label for="delete_recipe">delete_recipe : </label>
+        <input type="number" name="recipe_id" id="delete_recipe" required>
+        <br>
+        <input type="submit" >
+    </form>
+
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>signup</title>
+        <style>
+            body {
+                background-color: burlywood;
+            }
+        </style>
+    </head>
+<body>
+
+    <form action="/signup" method="POST" autocomplete="on">
+    <label for="name">username</label>
+    <input type="text" name="username" id="name" required >
+    <br><br>
+    <label for="password">password</label>
+    <input type="password" name="password" id="password" required >
+    <br> <br>
+    <label for="type">type:</label>
+    <select name="type" id="type" required>
+        <option value="user">user</option>
+        <option value="chef">chef</option>
+    </select>
+    <br> <br>
+    <input type="submit" value="SUBMIT">
+    </form>
+
+
+</body>
+</html>

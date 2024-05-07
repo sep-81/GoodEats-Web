@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <style>
+    div {
+        overflow: auto;
+    }
+    div a {
+        color: blue;
+        text-decoration: underline;
+    }
+    body {
+        text-align: center;
+        background-color: burlywood;
+    }
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+    }
+    th, td {
+   padding: 5px;
+    }
+    th {
+  text-align: left;
+    }
+    </style>
+</head>
+<body style="text-align: center;">
+    <h1>GOOD_EAT</h1>
+    <p><b>wellcome username</b></p>
+    <table style="width:100%">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th> 
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <a href="/user">return</a>
+    <div style="margin: auto;">
+        <form action="/filter">
+            <label for="type_filter">food_type_filter:</label>
+            <input type="hidden" name="id" value="filter1" >
+            <input type="text" name="type_filter" id="type_filter" required>
+            <br>
+            <input type="submit">
+        </form>
+
+        <form action="/filter">
+            <br>
+            duration:
+            <br>
+            <label for="min_time">from: </label>
+            <input type="number" name="min_time" id="min_time" required>
+            <input type="hidden" name="id" value="filter2" >
+            <br>
+            <label for="max_time">to : </label>
+            <input type="number" name="max_time" id="max_time" required >
+            <br>
+            <input type="submit">
+        </form>
+
+        <form action="/filter">
+            <input type="hidden" name="id" value="filter3" >
+            <br>
+            rate:
+            <br>
+            <label for="min_rate">from: </label>
+            <input type="number" name="min_rate" id="min_rate" required>
+            <br>
+            <label for="max_rate">to : </label>
+            <input type="number" name="max_rate" id="max_rate" required >
+            <br>
+            <input type="submit">
+        </form>
+        <br>
+        <form action="/filter">
+            <p>press delete button to reset filters</p>
+            <input type="hidden" name="id" value="delete">
+            <input type="submit" value="delete">
+        </form>
+        <br>
+        <a href="/shelvs">my shlevs</a>
+        <br>
+        <a href="/logout">logout</a>
+        
+    </div>
+</body>
+</html>
